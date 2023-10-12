@@ -11,37 +11,37 @@ build_property.EnableTrimAnalyzer = true
 build_property.IncludeAllContentForSelfExtract = 
 build_property.RootNamespace = Peliculas.AdministracionBlazor
 build_property.RootNamespace = Peliculas.AdministracionBlazor
-build_property.ProjectDir = C:\Users\MINEDUCYT\Desktop\Peliculas.AdministracionBlazor\Peliculas.AdministracionBlazor\
+build_property.ProjectDir = C:\Users\Henry\OneDrive\Escritorio\webAPIS\ProyectoFrontEnd\PeliculasCFHN.Administracion\Peliculas.AdministracionBlazor\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\MINEDUCYT\Desktop\Peliculas.AdministracionBlazor\Peliculas.AdministracionBlazor
+build_property.MSBuildProjectDirectory = C:\Users\Henry\OneDrive\Escritorio\webAPIS\ProyectoFrontEnd\PeliculasCFHN.Administracion\Peliculas.AdministracionBlazor
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/MINEDUCYT/Desktop/Peliculas.AdministracionBlazor/Peliculas.AdministracionBlazor/App.razor]
+[C:/Users/Henry/OneDrive/Escritorio/webAPIS/ProyectoFrontEnd/PeliculasCFHN.Administracion/Peliculas.AdministracionBlazor/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MINEDUCYT/Desktop/Peliculas.AdministracionBlazor/Peliculas.AdministracionBlazor/Pages/Home.razor]
+[C:/Users/Henry/OneDrive/Escritorio/webAPIS/ProyectoFrontEnd/PeliculasCFHN.Administracion/Peliculas.AdministracionBlazor/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MINEDUCYT/Desktop/Peliculas.AdministracionBlazor/Peliculas.AdministracionBlazor/Pages/Index.razor]
+[C:/Users/Henry/OneDrive/Escritorio/webAPIS/ProyectoFrontEnd/PeliculasCFHN.Administracion/Peliculas.AdministracionBlazor/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MINEDUCYT/Desktop/Peliculas.AdministracionBlazor/Peliculas.AdministracionBlazor/Shared/LoginLayout.razor]
+[C:/Users/Henry/OneDrive/Escritorio/webAPIS/ProyectoFrontEnd/PeliculasCFHN.Administracion/Peliculas.AdministracionBlazor/Shared/LoginLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExvZ2luTGF5b3V0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MINEDUCYT/Desktop/Peliculas.AdministracionBlazor/Peliculas.AdministracionBlazor/_Imports.razor]
+[C:/Users/Henry/OneDrive/Escritorio/webAPIS/ProyectoFrontEnd/PeliculasCFHN.Administracion/Peliculas.AdministracionBlazor/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MINEDUCYT/Desktop/Peliculas.AdministracionBlazor/Peliculas.AdministracionBlazor/Shared/MainLayout.razor]
+[C:/Users/Henry/OneDrive/Escritorio/webAPIS/ProyectoFrontEnd/PeliculasCFHN.Administracion/Peliculas.AdministracionBlazor/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-r0bsr0estf
 
-[C:/Users/MINEDUCYT/Desktop/Peliculas.AdministracionBlazor/Peliculas.AdministracionBlazor/Shared/NavMenu.razor]
+[C:/Users/Henry/OneDrive/Escritorio/webAPIS/ProyectoFrontEnd/PeliculasCFHN.Administracion/Peliculas.AdministracionBlazor/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-0nwaimveg9

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MINEDUCYT\\Desktop\\Peliculas.AdministracionBlazor\\Peliculas.AdministracionBlazor\\Peliculas.AdministracionBlazor.csproj": {}
+    "C:\\Users\\Henry\\OneDrive\\Escritorio\\webAPIS\\ProyectoFrontEnd\\PeliculasCFHN.Administracion\\Peliculas.AdministracionBlazor\\Peliculas.AdministracionBlazor.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MINEDUCYT\\Desktop\\Peliculas.AdministracionBlazor\\Peliculas.AdministracionBlazor\\Peliculas.AdministracionBlazor.csproj": {
+    "C:\\Users\\Henry\\OneDrive\\Escritorio\\webAPIS\\ProyectoFrontEnd\\PeliculasCFHN.Administracion\\Peliculas.AdministracionBlazor\\Peliculas.AdministracionBlazor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MINEDUCYT\\Desktop\\Peliculas.AdministracionBlazor\\Peliculas.AdministracionBlazor\\Peliculas.AdministracionBlazor.csproj",
+        "projectUniqueName": "C:\\Users\\Henry\\OneDrive\\Escritorio\\webAPIS\\ProyectoFrontEnd\\PeliculasCFHN.Administracion\\Peliculas.AdministracionBlazor\\Peliculas.AdministracionBlazor.csproj",
         "projectName": "Peliculas.AdministracionBlazor",
-        "projectPath": "C:\\Users\\MINEDUCYT\\Desktop\\Peliculas.AdministracionBlazor\\Peliculas.AdministracionBlazor\\Peliculas.AdministracionBlazor.csproj",
-        "packagesPath": "C:\\Users\\MINEDUCYT\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MINEDUCYT\\Desktop\\Peliculas.AdministracionBlazor\\Peliculas.AdministracionBlazor\\obj\\",
+        "projectPath": "C:\\Users\\Henry\\OneDrive\\Escritorio\\webAPIS\\ProyectoFrontEnd\\PeliculasCFHN.Administracion\\Peliculas.AdministracionBlazor\\Peliculas.AdministracionBlazor.csproj",
+        "packagesPath": "C:\\Users\\Henry\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Henry\\OneDrive\\Escritorio\\webAPIS\\ProyectoFrontEnd\\PeliculasCFHN.Administracion\\Peliculas.AdministracionBlazor\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\MINEDUCYT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Henry\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
