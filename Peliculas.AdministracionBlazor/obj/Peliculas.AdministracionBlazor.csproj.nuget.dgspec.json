@@ -1,6 +1,19 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
+    "C:\\Users\\Henry\\OneDrive\\Escritorio\\webAPIS\\ProyectoFrontEnd\\PeliculasCFHN.Administracion\\Peliculas.AdministracionBlazor\\Peliculas.AdministracionBlazor.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Henry\\OneDrive\\Escritorio\\webAPIS\\ProyectoFrontEnd\\PeliculasCFHN.Administracion\\Peliculas.AdministracionBlazor\\Peliculas.AdministracionBlazor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Henry\\OneDrive\\Escritorio\\webAPIS\\ProyectoFrontEnd\\PeliculasCFHN.Administracion\\Peliculas.AdministracionBlazor\\Peliculas.AdministracionBlazor.csproj",
+        "projectName": "Peliculas.AdministracionBlazor",
+        "projectPath": "C:\\Users\\Henry\\OneDrive\\Escritorio\\webAPIS\\ProyectoFrontEnd\\PeliculasCFHN.Administracion\\Peliculas.AdministracionBlazor\\Peliculas.AdministracionBlazor.csproj",
+        "packagesPath": "C:\\Users\\Henry\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Henry\\OneDrive\\Escritorio\\webAPIS\\ProyectoFrontEnd\\PeliculasCFHN.Administracion\\Peliculas.AdministracionBlazor\\obj\\",
+=======
     "C:\\Users\\Fernando Hernández\\Desktop\\Pelculas-Administracion\\PeliculasCFHN.Administracion\\Peliculas.AdministracionBlazor\\Peliculas.AdministracionBlazor.csproj": {}
   },
   "projects": {
@@ -12,9 +25,15 @@
         "projectPath": "C:\\Users\\Fernando Hernández\\Desktop\\Pelculas-Administracion\\PeliculasCFHN.Administracion\\Peliculas.AdministracionBlazor\\Peliculas.AdministracionBlazor.csproj",
         "packagesPath": "C:\\Users\\Fernando Hernández\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Fernando Hernández\\Desktop\\Pelculas-Administracion\\PeliculasCFHN.Administracion\\Peliculas.AdministracionBlazor\\obj\\",
+>>>>>>> 20407e1e4195c900374fb816652e4d3a862d9058
         "projectStyle": "PackageReference",
         "configFilePaths": [
+<<<<<<< HEAD
+          "C:\\Users\\Henry\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+=======
           "C:\\Users\\Fernando Hernández\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 20407e1e4195c900374fb816652e4d3a862d9058
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
