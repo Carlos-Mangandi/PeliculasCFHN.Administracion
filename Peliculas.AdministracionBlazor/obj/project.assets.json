@@ -1777,37 +1777,24 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\Henry\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
-=======
-    "C:\\Users\\Fernando Hernández\\.nuget\\packages\\": {}
->>>>>>> 20407e1e4195c900374fb816652e4d3a862d9058
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\Henry\\OneDrive\\Escritorio\\webAPIS\\ProyectoFrontEnd\\PeliculasCFHN.Administracion\\Peliculas.AdministracionBlazor\\Peliculas.AdministracionBlazor.csproj",
       "projectName": "Peliculas.AdministracionBlazor",
       "projectPath": "C:\\Users\\Henry\\OneDrive\\Escritorio\\webAPIS\\ProyectoFrontEnd\\PeliculasCFHN.Administracion\\Peliculas.AdministracionBlazor\\Peliculas.AdministracionBlazor.csproj",
       "packagesPath": "C:\\Users\\Henry\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Henry\\OneDrive\\Escritorio\\webAPIS\\ProyectoFrontEnd\\PeliculasCFHN.Administracion\\Peliculas.AdministracionBlazor\\obj\\",
-=======
-      "projectUniqueName": "C:\\Users\\Fernando Hernández\\Desktop\\Pelculas-Administracion\\PeliculasCFHN.Administracion\\Peliculas.AdministracionBlazor\\Peliculas.AdministracionBlazor.csproj",
-      "projectName": "Peliculas.AdministracionBlazor",
-      "projectPath": "C:\\Users\\Fernando Hernández\\Desktop\\Pelculas-Administracion\\PeliculasCFHN.Administracion\\Peliculas.AdministracionBlazor\\Peliculas.AdministracionBlazor.csproj",
-      "packagesPath": "C:\\Users\\Fernando Hernández\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Fernando Hernández\\Desktop\\Pelculas-Administracion\\PeliculasCFHN.Administracion\\Peliculas.AdministracionBlazor\\obj\\",
->>>>>>> 20407e1e4195c900374fb816652e4d3a862d9058
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-<<<<<<< HEAD
         "C:\\Users\\Henry\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-=======
-        "C:\\Users\\Fernando Hernández\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 20407e1e4195c900374fb816652e4d3a862d9058
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1865,18 +1852,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-            "version": "[6.0.4, 6.0.4]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {
@@ -1884,5 +1865,13 @@
         "#import": []
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema al leer el archivo de caché C:\\Users\\Henry\\OneDrive\\Escritorio\\webAPIS\\ProyectoFrontEnd\\PeliculasCFHN.Administracion\\Peliculas.AdministracionBlazor\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
