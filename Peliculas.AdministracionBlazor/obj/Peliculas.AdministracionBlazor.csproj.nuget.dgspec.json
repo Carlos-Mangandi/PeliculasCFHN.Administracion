@@ -1,11 +1,7 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
     "C:\\Users\\Fernando Hernández\\Desktop\\PeliculasAdministracio\\PeliculasCFHN.Administracion\\Peliculas.AdministracionBlazor\\Peliculas.AdministracionBlazor.csproj": {}
-=======
-    "C:\\Users\\Henry\\OneDrive\\Escritorio\\webAPIS\\ProyectoFrontEnd\\PeliculasCFHN.Administracion\\Peliculas.AdministracionBlazor\\Peliculas.AdministracionBlazor.csproj": {}
->>>>>>> 1b875639c81fddcc1fe4253096f9667533f8e267
   },
   "projects": {
     "C:\\Users\\Fernando Hernández\\Desktop\\PeliculasAdministracio\\PeliculasCFHN.Administracion\\Peliculas.AdministracionBlazor\\Peliculas.AdministracionBlazor.csproj": {
@@ -13,26 +9,12 @@
       "restore": {
         "projectUniqueName": "C:\\Users\\Fernando Hernández\\Desktop\\PeliculasAdministracio\\PeliculasCFHN.Administracion\\Peliculas.AdministracionBlazor\\Peliculas.AdministracionBlazor.csproj",
         "projectName": "Peliculas.AdministracionBlazor",
-<<<<<<< HEAD
         "projectPath": "C:\\Users\\Fernando Hernández\\Desktop\\PeliculasAdministracio\\PeliculasCFHN.Administracion\\Peliculas.AdministracionBlazor\\Peliculas.AdministracionBlazor.csproj",
         "packagesPath": "C:\\Users\\Fernando Hernández\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Fernando Hernández\\Desktop\\PeliculasAdministracio\\PeliculasCFHN.Administracion\\Peliculas.AdministracionBlazor\\obj\\",
-=======
-        "projectPath": "C:\\Users\\Henry\\OneDrive\\Escritorio\\webAPIS\\ProyectoFrontEnd\\PeliculasCFHN.Administracion\\Peliculas.AdministracionBlazor\\Peliculas.AdministracionBlazor.csproj",
-        "packagesPath": "C:\\Users\\Henry\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Henry\\OneDrive\\Escritorio\\webAPIS\\ProyectoFrontEnd\\PeliculasCFHN.Administracion\\Peliculas.AdministracionBlazor\\obj\\",
->>>>>>> 1b875639c81fddcc1fe4253096f9667533f8e267
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-<<<<<<< HEAD
           "C:\\Users\\Fernando Hernández\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-          "C:\\Users\\Henry\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
->>>>>>> 1b875639c81fddcc1fe4253096f9667533f8e267
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -90,12 +72,18 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
+              "version": "[6.0.4, 6.0.4]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
