@@ -1,0 +1,105 @@
+﻿
+@page "/pelicula/eliminar/{id:int}"
+
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+@inject ILocalStorageService _localStorageService
+
+<MudText Typo="Typo.h2" Class="ml">Eliminar Pelicula</MudText>
+
+<MudGrid>
+    <MudItem xs="12" sm="7">
+        <MudPaper Class="pa-4">
+            <EditForm Model="pelicula" OnValidSubmit="OnValidSubmit">
+                <DataAnnotationsValidator />
+                <MudCard>
+                    <MudCardContent>
+                        <MudTextField Label="Titulo" @bind-Value="pelicula.Titulo" For="@(() => pelicula.Titulo)" />
+                        <MudTextField Label="FechaEstreno" @bind-Value="pelicula.FechaEstreno" For="@(() => pelicula.FechaEstreno)" />
+                        <MudTextField Label="Actores" @bind-Value="pelicula.Actores" For="@(() => pelicula.Actores)" />
+                        <MudTextField Label="Descripcion" @bind-Value="pelicula.Descripcion" For="@(() => pelicula.Descripcion)" />
+                        <MudTextField Label="Imagen" @bind-Value="pelicula.Imagen" For="@(() => pelicula.Imagen)" />
+                        <MudSelect Variant="Variant.Outlined" Label="Genero" AnchorOrigin="Origin.BottomCenter"
+                                   @bind-Value="pelicula.IdGenero" For="@(() => pelicula.IdGenero)">
+                            @foreach (var item in generos)
+                            {
+                                <MudSelectItem Value="@item.Id">@item.Nombre</MudSelectItem>
+                            }
+                        </MudSelect>
+                        <MudSelect Variant="Variant.Outlined" Label="Director" AnchorOrigin="Origin.BottomCenter"
+                                   @bind-Value="pelicula.IdDirector" For="@(() => pelicula.IdDirector)">
+                            @foreach (var item in directores)
+                            {
+                                <MudSelectItem Value="@item.Id">@item.Nombre</MudSelectItem>
+                            }
+                        </MudSelect>
+                    </MudCardContent>
+                    <MudCardActions>
+                        <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Error" Class="ml-auto">Eliminar</MudButton>
+                    </MudCardActions>
+                </MudCard>
+            </EditForm>
+            @if (showLeaveAlert)
+            {
+                <MudAlert Severity="Severity.Error" ContentAlignment="HorizontalAlignment.Center" ShowCloseIcon="true" CloseIconClicked="(() => CloseMe(true))">Ocurrió un problema.</MudAlert>
+            }
+        </MudPaper>
+    </MudItem>
+</MudGrid>
+
+@code {
+    [Parameter]
+    public int id { get; set; }
+
+    private IEnumerable<Genero> generos = new List<Genero>();
+    private IEnumerable<Director> directores = new List<Director>();
+    private bool showLeaveAlert = false;
+    Pelicula pelicula = new Pelicula();
+
+    protected override async Task OnInitializedAsync()
+    {
+        Http.DefaultRequestHeaders.Authorization =
+        new AuthenticationHeaderValue("Bearer", await _localStorageService.GetItemAsync<string>("token"));
+        await getGeneros();
+        await getDirectores();
+
+        var resp = await Http.GetStringAsync("pelicula/" + id);
+        pelicula = JsonSerializer.Deserialize<Pelicula>(resp, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+    }
+
+    private async Task OnValidSubmit(EditContext context)
+    {
+        await eliminar();
+    }
+
+    private async Task eliminar()
+    {
+        var httpResponse = await Http.DeleteAsync("pelicula/" + pelicula.Id);
+
+        if (!(httpResponse.StatusCode == System.Net.HttpStatusCode.OK))
+        {
+            showLeaveAlert = true;
+        }
+        else
+        {
+            NavigationManager.NavigateTo("pelicula/index");
+        }
+    }
+
+    private void CloseMe(bool value)
+    {
+        showLeaveAlert = false;
+    }
+
+    private async Task getGeneros()
+    {
+        var httpResponse = await Http.GetStringAsync("genero");
+        generos = JsonSerializer.Deserialize<IEnumerable<Genero>>(httpResponse, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+    }
+    
+    private async Task getDirectores()
+    {
+        var httpResponse = await Http.GetStringAsync("director");
+        directores = JsonSerializer.Deserialize<IEnumerable<Director>>(httpResponse, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+    }
+}

@@ -1,0 +1,61 @@
+﻿
+@page "/pelicula/index"
+
+@inject HttpClient httpClient
+@inject NavigationManager NavigationManager
+
+<MudText Typo="Typo.h2" Class="ml">Peliculas</MudText>
+
+<MudTable Items="@peliculas" Hover="true" Bordered="true" Striped="true">
+    <ToolBarContent>
+        <MudFab Color="Color.Primary" StartIcon="@Icons.Material.Filled.Add" OnClick="goAdd" />
+        <MudSpacer />
+        <MudTextField @bind-Value="searchText" Placeholder="Search" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0"></MudTextField>
+    </ToolBarContent>
+    <HeaderContent>
+        <MudTh>Id</MudTh>
+        <MudTh>Titulo</MudTh>
+        <MudTh>Genero</MudTh>
+        <MudTh>Director</MudTh>
+        <MudTh>Acciones</MudTh>
+    </HeaderContent>
+    <RowTemplate>
+        <MudTd DataLabel="Id">@context.Id</MudTd>
+        <MudTd DataLabel="Titulo">@context.Titulo</MudTd>
+        <MudTd DataLabel="Genero">@context.Genero.Nombre</MudTd>
+        <MudTd DataLabel="Director">@context.Director.Nombre</MudTd>
+        <MudTd>
+            <MudButton Link="@($"/pelicula/editar/{context.Id}")" Size="Size.Small" Variant="Variant.Outlined" Color="Color.Tertiary"
+                       Class="text-center">Editar</MudButton>
+            <MudButton Link="@($"/pelicula/eliminar/{context.Id}")" Size="Size.Small" Variant="Variant.Outlined" Color="Color.Warning"
+                       Class="text-center">Eliminar</MudButton>
+        </MudTd>
+    </RowTemplate>
+    <PagerContent>
+        <MudTablePager />
+    </PagerContent>
+</MudTable>
+
+@code {
+    private IEnumerable<Pelicula> peliculas = new List<Pelicula>();
+    private string searchText = "";
+    private Pelicula pelicula = new Pelicula();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await getAll();
+    }
+
+    private async Task getAll()
+    {
+        var httpResponse = await httpClient.PostAsJsonAsync("pelicula/buscar", pelicula);
+        string respString = await httpResponse.Content.ReadAsStringAsync();
+        peliculas = JsonSerializer.Deserialize<IEnumerable<Pelicula>>(respString, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+    }
+
+    private void goAdd()
+    {
+        NavigationManager.NavigateTo("pelicula/agregar");
+    }
+}
+

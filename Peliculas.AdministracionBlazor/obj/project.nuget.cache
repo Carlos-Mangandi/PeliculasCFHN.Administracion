@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sWvc9Nmx/+P25Y9EcNIR79j1HBc7wAQBqeImEOyJr1VuZ1pAEBH5zwLt3ScKSJbXisceR4XkcJgIDulQPFspRA==",
+  "dgSpecHash": "iDV3lJWLcS8nENPl411pR2VIL8PLt8SoyXiZPmhFQ6VjpIwnS1sH86T5EinwQfmIPMkEtmWBw6YnVQpwbiwwaA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\MINEDUCYT\\Desktop\\Peliculas.AppBlazor\\PeliculasCFHN.Administracion\\Peliculas.AdministracionBlazor\\Peliculas.AdministracionBlazor.csproj",
+  "projectFilePath": "C:\\Users\\MINEDUCYT\\Desktop\\Peliculas.AdministracionBlazor\\Peliculas.AdministracionBlazor\\Peliculas.AdministracionBlazor.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MINEDUCYT\\.nuget\\packages\\blazored.localstorage\\4.4.0\\blazored.localstorage.4.4.0.nupkg.sha512",
     "C:\\Users\\MINEDUCYT\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.23\\microsoft.aspnetcore.authorization.6.0.23.nupkg.sha512",
