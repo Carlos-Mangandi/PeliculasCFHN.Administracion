@@ -22,6 +22,22 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Fernando Hernández/Desktop/PeliculasAdministracio/PeliculasCFHN.Administracion/Peliculas.AdministracionBlazor/Pages/Director/Agregar.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGlyZWN0b3JcQWdyZWdhci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Fernando Hernández/Desktop/PeliculasAdministracio/PeliculasCFHN.Administracion/Peliculas.AdministracionBlazor/Pages/Director/Editar.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGlyZWN0b3JcRWRpdGFyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Fernando Hernández/Desktop/PeliculasAdministracio/PeliculasCFHN.Administracion/Peliculas.AdministracionBlazor/Pages/Director/Eliminar.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGlyZWN0b3JcRWxpbWluYXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Fernando Hernández/Desktop/PeliculasAdministracio/PeliculasCFHN.Administracion/Peliculas.AdministracionBlazor/Pages/Director/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGlyZWN0b3JcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Fernando Hernández/Desktop/PeliculasAdministracio/PeliculasCFHN.Administracion/Peliculas.AdministracionBlazor/Pages/Genero/Editar.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2VuZXJvXEVkaXRhci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
