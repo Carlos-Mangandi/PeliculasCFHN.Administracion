@@ -15,7 +15,7 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("https:/
 builder.Services.AddMudServices();
 
 builder.Services.AddScoped<UserAuth>();
-builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthenticationProvider>();
+IServiceCollection serviceCollection = builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthenticationProvider>();
 builder.Services.AddAuthorizationCore();
 builder.Services.AddBlazoredLocalStorage();
 
