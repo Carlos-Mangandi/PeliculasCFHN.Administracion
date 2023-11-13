@@ -32,6 +32,8 @@ namespace Peliculas.AdministracionBlazor.Models
         [Compare("Password", ErrorMessage = "Password y confirmar password deben de ser iguales")]
         [Display(Name = "Confirmar password")]
         public string ConfirmPassword_aux { get; set; }
+
+
     }
 
     public class UserLogin

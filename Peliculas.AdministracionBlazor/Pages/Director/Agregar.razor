@@ -1,4 +1,5 @@
-﻿@page "/director/agregar"
+﻿
+@page "/director/agregar"
 @inject HttpClient Http
 @inject NavigationManager NavigationManager
 @inject ILocalStorageService _localStorageService
@@ -26,6 +27,7 @@
                      <MudCardContent>
                         <MudTextField Label="Imagen" @bind-Value="director.Imagen" For="@(() => director.Imagen)" />                        
                     </MudCardContent>
+
                     <MudCardActions>
                         <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" Class="ml-auto">Guardar</MudButton>
                     </MudCardActions>

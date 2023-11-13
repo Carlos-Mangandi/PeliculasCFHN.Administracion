@@ -1,4 +1,5 @@
-﻿@page "/usuario/index"
+﻿
+@page "/usuario/index"
 @inject HttpClient httpClient
 @inject NavigationManager NavigationManager
 @inject ILocalStorageService _localStorageService
@@ -9,7 +10,9 @@
     <ToolBarContent>
         <MudFab Color="Color.Primary" StartIcon="@Icons.Material.Filled.Add" OnClick="goAdd" />
         <MudSpacer />
-        <MudTextField @bind-Value="searchText" Placeholder="Search" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0"></MudTextField>
+        <MudTextField @bind-Value="searchText" OnKeyUp="OnSearchKeyUp" Placeholder="Search" Adornment="Adornment.Start" 
+                      AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0">
+        </MudTextField> 
     </ToolBarContent>
     <HeaderContent>
         <MudTh>Id</MudTh>
@@ -67,5 +70,20 @@
     private void goAdd()
     {
         NavigationManager.NavigateTo("usuario/agregar");
+    }
+
+    private async Task OnSearchKeyUp(KeyboardEventArgs e)
+    {
+        if (e.Code == "Enter")
+        {
+            buscarUsuario();
+        }
+    }
+
+    private async Task buscarUsuario()
+    {
+        var httpResponse = await httpClient.PostAsJsonAsync($"usuario/buscar", new Usuario { Nombre = searchText});
+        string respString = await httpResponse.Content.ReadAsStringAsync();
+        usuarios = JsonSerializer.Deserialize<IEnumerable<Usuario>>(respString, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
     }
 }

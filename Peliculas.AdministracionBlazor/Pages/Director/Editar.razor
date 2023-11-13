@@ -1,5 +1,76 @@
-﻿<h3>Editar</h3>
+﻿
+@page "/director/editar/{id:int}"
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+@inject ILocalStorageService _localStorageService
+
+<MudText Typo="Typo.h2" Class="ml">Editar Director</MudText>
+
+<MudGrid>
+    <MudItem xs="12" sm="7">
+        <MudPaper Class="pa-4">
+            <EditForm Model="director" OnValidSubmit="OnValidSubmit">
+                <DataAnnotationsValidator />
+                <MudCard>
+                    <MudCardContent>
+                        <MudTextField Label="Nombre" @bind-Value="director.Nombre" For="@(() => director.Nombre)" />                        
+                        <MudTextField Label="Apellido" @bind-Value="director.Apellido" For="@(() => director.Apellido)" />                        
+                        <MudTextField Label="FechaNacimiento" @bind-Value="director.FechaNacimiento" For="@(() => director.FechaNacimiento)" />                        
+                        <MudTextField Label="Nacionalidad" @bind-Value="director.Nacionalidad" For="@(() => director.Nacionalidad)" />                        
+                        <MudTextField Label="Imagen" @bind-Value="director.Imagen" For="@(() => director.Imagen)" />                        
+                    </MudCardContent>
+
+                    <MudCardActions>
+                        <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" Class="ml-auto">Guardar cambios</MudButton>
+                    </MudCardActions>
+                </MudCard>
+            </EditForm>
+            @if (showLeaveAlert)
+            {
+                <MudAlert Severity="Severity.Error" ContentAlignment="HorizontalAlignment.Center" ShowCloseIcon="true" CloseIconClicked="(() => CloseMe(true))">No se pudo guardar.</MudAlert>
+            }
+        </MudPaper>
+    </MudItem>
+</MudGrid>
 
 @code {
+    [Parameter]
+    public int id { get; set; }
+    private bool showLeaveAlert = false;
 
+    Director director = new Director();
+
+    protected override async Task OnInitializedAsync()
+    {
+        Http.DefaultRequestHeaders.Authorization =
+            new AuthenticationHeaderValue("Bearer", await _localStorageService.GetItemAsync<string>("token"));
+        var resp = await Http.GetStringAsync("director/" + id);
+        director = JsonSerializer.Deserialize<Director>(resp, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+    }
+
+    private async Task OnValidSubmit(EditContext context)
+    {
+        await saveChanges();
+    }
+
+    private async Task saveChanges()
+    {
+
+        var httpResponse = await Http.PutAsJsonAsync<Director>("director/" + director.Id, director);
+
+        if (!(httpResponse.StatusCode == System.Net.HttpStatusCode.OK))
+        {
+            showLeaveAlert = true;
+        }
+        else
+        {
+            NavigationManager.NavigateTo("director/index");
+        }
+    }
+
+    private void CloseMe(bool value)
+    {
+        showLeaveAlert = false;
+    }
 }
+

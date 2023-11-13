@@ -1,15 +1,18 @@
-﻿@page "/genero/index"
+﻿
+@page "/genero/index"
 @inject HttpClient httpClient
 @inject NavigationManager NavigationManager
 @inject ILocalStorageService _localStorageService
 
-<MudText Typo="Typo.h2" Class="ml">Generos</MudText>
+<MudText Typo="Typo.h2" Class="ml">Géneros</MudText>
 
 <MudTable Items="@generos" Dense="true" Hover="true" Bordered="true" Striped="true">
     <ToolBarContent>
         <MudFab Color="Color.Primary" StartIcon="@Icons.Material.Filled.Add" OnClick="goAdd" />
         <MudSpacer />
-        <MudTextField @bind-Value="searchText" Placeholder="Search" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0"></MudTextField>
+        <MudTextField @bind-Value="searchText" OnKeyUp="OnSearchKeyUp" Placeholder="Search" Adornment="Adornment.Start" 
+                      AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0">
+        </MudTextField>    
     </ToolBarContent>
     <HeaderContent>
         <MudTh>Id</MudTh>
@@ -51,5 +54,20 @@
     private void goAdd()
     {
         NavigationManager.NavigateTo("genero/agregar");
+    }
+
+    private async Task OnSearchKeyUp(KeyboardEventArgs e)
+    {
+        if (e.Code == "Enter")
+        {
+            buscarGenero();
+        }
+    }
+
+    private async Task buscarGenero()
+    {
+        var httpResponse = await httpClient.PostAsJsonAsync($"genero/buscar", new Genero { Nombre = searchText});
+        string respString = await httpResponse.Content.ReadAsStringAsync();
+        generos = JsonSerializer.Deserialize<IEnumerable<Genero>>(respString, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
     }
 }

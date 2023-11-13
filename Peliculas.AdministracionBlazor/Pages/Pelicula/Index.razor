@@ -1,6 +1,5 @@
 ﻿
 @page "/pelicula/index"
-
 @inject HttpClient httpClient
 @inject NavigationManager NavigationManager
 
@@ -10,7 +9,9 @@
     <ToolBarContent>
         <MudFab Color="Color.Primary" StartIcon="@Icons.Material.Filled.Add" OnClick="goAdd" />
         <MudSpacer />
-        <MudTextField @bind-Value="searchText" Placeholder="Search" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0"></MudTextField>
+        <MudTextField @bind-Value="searchText" OnKeyUp="OnSearchKeyUp" Placeholder="Search" Adornment="Adornment.Start" 
+                      AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0">
+        </MudTextField>     
     </ToolBarContent>
     <HeaderContent>
         <MudTh>Id</MudTh>
@@ -23,7 +24,8 @@
         <MudTd DataLabel="Id">@context.Id</MudTd>
         <MudTd DataLabel="Titulo">@context.Titulo</MudTd>
         <MudTd DataLabel="Genero">@context.Genero.Nombre</MudTd>
-        <MudTd DataLabel="Director">@context.Director.Nombre</MudTd>
+        @*<MudTd DataLabel="Director">@context.Director.Nombre</MudTd>*@
+        <MudTd DataLabel="Director">@($"{context.Director.Nombre} {context.Director.Apellido}")</MudTd>
         <MudTd>
             <MudButton Link="@($"/pelicula/editar/{context.Id}")" Size="Size.Small" Variant="Variant.Outlined" Color="Color.Tertiary"
                        Class="text-center">Editar</MudButton>
@@ -57,5 +59,19 @@
     {
         NavigationManager.NavigateTo("pelicula/agregar");
     }
-}
 
+    private async Task OnSearchKeyUp(KeyboardEventArgs e)
+    {
+        if (e.Code == "Enter")
+        {
+            buscarPelicula();
+        }
+    }
+
+    private async Task buscarPelicula()
+    {
+        var httpResponse = await httpClient.PostAsJsonAsync($"pelicula/buscar", new Pelicula { Titulo = searchText});
+        string respString = await httpResponse.Content.ReadAsStringAsync();
+        peliculas = JsonSerializer.Deserialize<IEnumerable<Pelicula>>(respString, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+    }
+}

@@ -1,4 +1,5 @@
-﻿@page "/rol/index"
+﻿
+@page "/rol/index"
 @inject HttpClient httpClient
 @inject NavigationManager NavigationManager
 @inject ILocalStorageService _localStorageService
@@ -9,7 +10,9 @@
     <ToolBarContent>
         <MudFab Color="Color.Primary" StartIcon="@Icons.Material.Filled.Add" OnClick="goAdd" />
         <MudSpacer />
-        <MudTextField @bind-Value="searchText" Placeholder="Search" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0"></MudTextField>
+        <MudTextField @bind-Value="searchText" OnKeyUp="OnSearchKeyUp" Placeholder="Search" Adornment="Adornment.Start" 
+                      AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0">
+        </MudTextField> 
     </ToolBarContent>
     <HeaderContent>
         <MudTh>Id</MudTh>
@@ -51,5 +54,20 @@
     private void goAdd()
     {
         NavigationManager.NavigateTo("rol/agregar");
+    }
+
+    private async Task OnSearchKeyUp(KeyboardEventArgs e)
+    {
+        if (e.Code == "Enter")
+        {
+            buscarRol();
+        }
+    }
+
+    private async Task buscarRol()
+    {
+        var httpResponse = await httpClient.PostAsJsonAsync($"rol/buscar", new Rol { Nombre = searchText});
+        string respString = await httpResponse.Content.ReadAsStringAsync();
+        roles = JsonSerializer.Deserialize<IEnumerable<Rol>>(respString, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
     }
 }

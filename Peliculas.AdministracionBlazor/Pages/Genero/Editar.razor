@@ -1,9 +1,10 @@
-﻿@page "/genero/editar/{id:int}"
+﻿
+@page "/genero/editar/{id:int}"
 @inject HttpClient Http
 @inject NavigationManager NavigationManager
 @inject ILocalStorageService _localStorageService
 
-<MudText Typo="Typo.h2" Class="ml">Editar Genero</MudText>
+<MudText Typo="Typo.h2" Class="ml">Editar Género</MudText>
 
 <MudGrid>
     <MudItem xs="12" sm="7">
@@ -31,6 +32,7 @@
     [Parameter]
     public int id { get; set; }
     private bool showLeaveAlert = false;
+
     Genero genero = new Genero();
 
     protected override async Task OnInitializedAsync()

@@ -1,5 +1,4 @@
-﻿
-@inherits LayoutComponentBase
+﻿@inherits LayoutComponentBase
 @inject ILocalStorageService _localStorageService
 @inject NavigationManager NavigationManager
 
@@ -23,6 +22,7 @@
         
     </MudMainContent>
 </MudLayout>
+
 @code {
     [CascadingParameter]
     private Task<AuthenticationState> authenticationStateTask { get; set; }

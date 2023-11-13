@@ -1,6 +1,5 @@
 ﻿
 @page "/pelicula/agregar"
-
 @inject HttpClient Http
 @inject NavigationManager NavigationManager
 @inject ILocalStorageService _localStorageService
@@ -30,7 +29,7 @@
                                    @bind-Value="pelicula.IdDirector" For="@(() => pelicula.IdDirector)">
                             @foreach (var item in directores)
                             {
-                                <MudSelectItem Value="@item.Id">@item.Nombre</MudSelectItem>
+                                <MudSelectItem Value="@item.Id">@($"{item.Nombre} {item.Apellido}")</MudSelectItem>
                             }
                         </MudSelect>
                     </MudCardContent>

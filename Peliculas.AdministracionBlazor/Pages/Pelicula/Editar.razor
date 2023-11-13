@@ -19,6 +19,8 @@
                         <MudTextField Label="Actores" @bind-Value="pelicula.Actores" For="@(() => pelicula.Actores)" />
                         <MudTextField Label="Descripcion" @bind-Value="pelicula.Descripcion" For="@(() => pelicula.Descripcion)" />
                         <MudTextField Label="Imagen" @bind-Value="pelicula.Imagen" For="@(() => pelicula.Imagen)" />
+                        @*<MudTextArea Label="Descripción" @bind-Value="pelicula.Descripcion" For="@(() => pelicula.Descripcion)" />*@
+
                         <MudSelect Variant="Variant.Outlined" Label="Genero" AnchorOrigin="Origin.BottomCenter"
                                    @bind-Value="pelicula.IdGenero" For="@(() => pelicula.IdGenero)">
                             @foreach (var item in generos)
@@ -30,9 +32,13 @@
                                    @bind-Value="pelicula.IdDirector" For="@(() => pelicula.IdDirector)">
                             @foreach (var item in directores)
                             {
-                                <MudSelectItem Value="@item.Id">@item.Nombre</MudSelectItem>
+                                <MudSelectItem Value="@item.Id">@($"{item.Nombre} {item.Apellido}")</MudSelectItem>
                             }
                         </MudSelect>
+                        @*<div class="form-group">
+                            <label>Descripcion</label>
+                            <InputTextArea @bind-Value="pelicula.Descripcion" For="@(() => pelicula.Descripcion)" />
+                        </div>*@
                     </MudCardContent>
                     <MudCardActions>
                         <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" Class="ml-auto">Guardar cambios</MudButton>
@@ -103,4 +109,3 @@
         directores = JsonSerializer.Deserialize<IEnumerable<Director>>(httpResponse, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
     }
 }
-
