@@ -27,10 +27,8 @@
         @*<MudTd DataLabel="Director">@context.Director.Nombre</MudTd>*@
         <MudTd DataLabel="Director">@($"{context.Director.Nombre} {context.Director.Apellido}")</MudTd>
         <MudTd>
-            <MudButton Link="@($"/pelicula/editar/{context.Id}")" Size="Size.Small" Variant="Variant.Outlined" Color="Color.Tertiary"
-                       Class="text-center">Editar</MudButton>
-            <MudButton Link="@($"/pelicula/eliminar/{context.Id}")" Size="Size.Small" Variant="Variant.Outlined" Color="Color.Warning"
-                       Class="text-center">Eliminar</MudButton>
+            <MudButton Link="@($"/pelicula/editar/{context.Id}")" Size="Size.Small" Variant="Variant.Outlined" Color="Color.Tertiary" Class="text-center">Editar</MudButton>
+            <MudButton Link="@($"/pelicula/eliminar/{context.Id}")" Size="Size.Small" Variant="Variant.Outlined" Color="Color.Warning" Class="text-center">Eliminar</MudButton>
         </MudTd>
     </RowTemplate>
     <PagerContent>
